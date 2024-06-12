@@ -14,6 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.Comment;
@@ -36,10 +37,17 @@ import lombok.NoArgsConstructor;
 @Embeddable
 @EqualsAndHashCode
 @Builder
+@SequenceGenerator(
+		name = "REVIEW_SEQ_GENERATOR",
+		sequenceName = "REVIEW_SEQ",
+		initialValue = 1,
+		allocationSize = 1
+)
 public class Review
 {
+	//@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "REVIEW_SEQ_GENERATOR")
 	@Comment("후기 글번호")
 	private Long reviewId;
 	

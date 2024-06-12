@@ -15,6 +15,7 @@ import org.springframework.data.annotation.CreatedDate;
 
 import com.sist.nbgb.enums.Provider;
 import com.sist.nbgb.enums.Role;
+import com.sist.nbgb.enums.Status;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -84,5 +85,15 @@ public class User
 	@CreatedDate
 	@Comment("회원 가입일")
 	private LocalDateTime userRegdate;
+
+//	@Column
+//	@Comment("회원 상태")
+//	@Enumerated(EnumType.STRING)
+//	private Status userStatus;
+//	
+//	@Column
+//	@Comment("회원 방식")
+//	@Enumerated(EnumType.STRING)
+//	private Provider userIden;
 
 }

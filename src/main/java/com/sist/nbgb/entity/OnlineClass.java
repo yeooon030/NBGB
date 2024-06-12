@@ -13,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.Comment;
@@ -35,10 +36,17 @@ import lombok.Setter;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@SequenceGenerator(
+		name = "ONLINE_SEQ_GENERATOR",
+		sequenceName = "ONLINE_SEQ",
+		initialValue = 350,
+		allocationSize = 1
+)
 public class OnlineClass 
 {
+	//@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ONLINE_SEQ_GENERATOR")
 	@Comment("온라인 강의 글번호")
 	private Long onlineClassId;
 	

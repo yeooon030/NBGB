@@ -13,6 +13,7 @@ import org.hibernate.annotations.Comment;
 import org.springframework.data.annotation.CreatedDate;
 
 import com.sist.nbgb.enums.Role;
+import com.sist.nbgb.enums.Status;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -76,5 +77,10 @@ public class Instructors
 	@Column(length = 30)
 	@Comment("강사 주 카테고리")
 	private String instructorCategory;
-		
+	
+//	@Column
+//	@Comment("강사 상태")
+//	@Enumerated(EnumType.STRING)
+//	private Status instructorStatus;
+	
 }
