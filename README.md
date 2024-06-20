@@ -1,6 +1,8 @@
 # Spring Boot Project - 내방공방(팀프로젝트)
-온라인 강의 수강(내방 클래스)과 오프라인 강의 예약(공방클래스)을 통합한 **온오프라인 강의 플랫폼**</br>
+온라인 강의 수강(내방 클래스)과 오프라인 강의 예약(공방클래스)을 통합한 **온오프라인 강의 플랫폼**</br></br>
 ![NBGB](https://github.com/yeooon030/JavaScript-to_do_list/assets/133891777/3f092791-0289-4549-897b-63da45daafe2)
+</br></br>
+프로젝트 시연 영상(https://youtu.be/ez3YYdofS14?si=9OaodXSLuRK1b6Da)
 
 ## 💻 1.프로젝트 소개
 - 온라인 강의를 결제하여 일정 기간동안 강의를 수강할 수 있는 사이트입니다.
